@@ -22,13 +22,20 @@
                                 <rect key="frame" x="0.0" y="82" width="375" height="730"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zUH-Eh-k1M"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-u5-wMP">
                                 <rect key="frame" x="0.0" y="38" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="rVD-A0-nsV">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vzz-kW-k1Z"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vzz-kW-k1Z">
+                                            <connections>
+                                                <action selector="onPlusTapped" destination="BYZ-38-t0r" id="rIy-Ke-TAy"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -36,6 +43,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sQ6-En-DZ0" id="5rU-z8-svY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
